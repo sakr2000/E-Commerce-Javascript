@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Limonera-1: rgba(1, 6, 89, 1);
+  --Limonera-2: rgba(1, 10, 63, 1);
+  --Limonera-3: rgba(214, 216, 216, 1);
+  --Limonera-4: rgba(114, 165, 141, 1);
+  --Limonera-5: rgba(149, 191, 171, 1);
+
+  --Limonera-transparent-1: rgba(1, 6, 89, 0.5);
+  --Limonera-transparent-2: rgba(1, 10, 63, 0.5);
+  --Limonera-transparent-3: rgba(214, 216, 216, 0.5);
+  --Limonera-transparent-4: rgba(114, 165, 141, 0.5);
+  --Limonera-transparent-5: rgba(149, 191, 171, 0.5);
+}
+
+body {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Limonera-transparent-3);
+  color: var(--Limonera-5);
+  padding: 10px;
+}
+
+.nav-bar .logo img {
+  width: 150px;
+}
+
+.nav-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-bar li {
+  margin-right: 10px;
+}
+
+.nav-bar a {
+  color: var(--Limonera-1);
+  text-decoration: none;
+  padding: 5px;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.nav-bar a:hover {
+  color: var(--Limonera-5);
+}
+
+.nav-bar .cart .material-icons {
+  color: var(--Limonera-1);
+  font-size: 2rem;
+}
+
+.nav-bar .cart:hover {
+  color: var(--Limonera-5);
+}
