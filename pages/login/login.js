@@ -37,6 +37,8 @@ loginform.addEventListener("submit", function (e) {
       checkPassword(password.value, user.password).then((isCorrect) => {
         if (isCorrect) {
           // Show success message
+          var activeUser = user;
+          window.localStorage.setItem("activeUser", JSON.stringify(activeUser));
           alert("Login Successful");
         } else {
           // Show error message

@@ -2,6 +2,7 @@ var registerForm = document.getElementById("registerForm");
 var email = document.getElementById("email");
 var password = document.getElementById("password");
 var confirmPassword = document.getElementById("confirmPassword");
+var username = document.getElementById("username");
 var users = JSON.parse(window.localStorage.getItem("users")) || [];
 function isValidEmail(email) {
   const emailRegex = /^[a-zA-Z0-9._]+@[a-zA-Z0-9-]+\.[a-zA-Z]+$/;
@@ -51,8 +52,10 @@ registerForm.addEventListener("submit", function (e) {
     // hashing password
     hashPassword(password.value).then((hashedPassword) => {
       var user = {
+        name: username.value,
         email: email.value,
         password: hashedPassword,
+        cart: [],
       };
       users.push(user);
       window.localStorage.setItem("users", JSON.stringify(users));
