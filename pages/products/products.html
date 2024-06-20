@@ -3,19 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
     <title>e-Shop | Products</title>
+    <link rel="stylesheet" href="products.css" />
   </head>
   <body>
+    <div class="nav-bar">
+      <a href="../../index.html" class="logo">
+        <img src="../../assets/images/Logo.png" alt="My Fancy shop" />
+      </a>
+      <ul>
+        <li><a href="../products/products.html">Products</a></li>
+        <li><a href="../login/login.html">Login</a></li>
+        <li><a href="../register/register.html">Register</a></li>
+        <div class="cart">
+          <span class="material-icons"> shopping_cart </span>
+          <span class="cart-items">0</span>
+        </div>
+      </ul>
+    </div>
+
     <div class="hero-section">
+      <div class="overlay"></div>
       <h1>Products</h1>
     </div>
+
     <div class="product-container">
-      <div class="product-sideNav">
-        <ul id="categories">
+      <div class="categories-container">
+        <span>Categories :</span>
+        <ul class="categories" id="categories">
+          <li><button class="btn btn-category active" id="all">All</button></li>
         </ul>
       </div>
 
       <div class="product-items">
+    </div>
+
+    <div class="cart-popup">
+      <div class="cart-container">
+        <div class="cart-header">
+          <h3>Cart</h3>
+          <span class="material-icons close"> close </span>
+        </div>
+        <div class="cart-items">
+      </div>
+      <div class="cart-footer">
+        <h3>Total : <span class="cart-total">0</span></h3>
+        <button class="btn btn-clear">Clear Cart</button>
+        <button class="btn btn-checkout">Checkout</button>
+      </div>
     </div>
     <script src="products.js"></script>
   </body>

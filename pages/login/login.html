@@ -2,23 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e-Shop | Login</title>
+    <link rel="stylesheet" href="login.css" />
   </head>
   <body>
+    <div class="nav-bar">
+      <a href="../../index.html" class="logo">
+        <img src="../../assets/images/Logo.png" alt="My Fancy shop" />
+      </a>
+      <ul>
+        <li><a href="../products/products.html">Products</a></li>
+        <li><a href="../login/login.html">Login</a></li>
+        <li><a href="../register/register.html">Register</a></li>
+        <div class="cart">
+          <span class="material-icons"> shopping_cart </span>
+        </div>
+      </ul>
+    </div>
+
     <div class="container">
-      <form id="loginForm">
-        <h1>Login</h1>
-        <input type="email" name="email" id="email" placeholder="Email" />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Password"
-        />
-        <input type="submit" value="Login" />
-      </form>
-      <p>New to e-Shop? <a href="../register/register.html">Register Now</a></p>
+      <div class="image">
+        <img src="../../assets/images/Login.svg" alt="login image" />
+      </div>
+
+      <div class="form-container">
+        <form id="loginForm">
+          <h1>Login</h1>
+          <input type="email" name="email" id="email" placeholder="Email" />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <input type="submit" value="Login" />
+          <p>
+            New to e-Shop? <a href="../register/register.html">Register Now</a>
+          </p>
+        </form>
+      </div>
     </div>
     <script src="login.js"></script>
   </body>

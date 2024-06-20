@@ -8,13 +8,14 @@
       rel="stylesheet"
     />
     <title>Home Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
+    <!-- Nav Bar -->
     <div class="nav-bar">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <img src="assets/images/Logo.png" alt="My Fancy shop" />
-      </div>
+      </a>
       <ul>
         <li><a href="pages/products/products.html">Products</a></li>
         <li><a href="pages/login/login.html">Login</a></li>
@@ -25,9 +26,50 @@
       </ul>
     </div>
 
-    <div class="main">
-      <h1>Welcome to my shop</h1>
-      <div class="slider"></div>
+    <!-- Main Section -->
+    <div class="main-section">
+      <h1>Welcome to e-shop</h1>
+      <p></p>
+      <div class="slider">
+        <div class="slide slide-2">
+          <div class="overlay"></div>
+          <div class="content">
+            <span>Explore, Order , Save</span>
+            <h3>Make your oreder with ease</h3>
+            <a href="pages/products/products.html">Shop Now</a>
+          </div>
+        </div>
+        <div class="slide slide-1">
+          <div class="overlay"></div>
+          <div class="content">
+            <span>Explore, Order , Save</span>
+            <h3>Big Sales and Big Discounts</h3>
+            <a href="pages/products/products.html">Shop Now</a>
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <div class="overlay"></div>
+          <div class="content">
+            <span>Explore, Order , Save</span>
+            <h3>Explore many products</h3>
+            <a href="pages/products/products.html">Shop Now</a>
+          </div>
+        </div>
+        <div class="slide slide-4">
+          <div class="overlay"></div>
+          <div class="content">
+            <span>Explore, Order , Save</span>
+            <h3>Easy to order,Fast to Deliver</h3>
+            <a href="pages/products/products.html">Shop Now</a>
+          </div>
+        </div>
+        <div class="controls">
+          <span class="material-icons prev-slide"> arrow_back_ios </span>
+          <span class="material-icons next-slide"> arrow_forward_ios </span>
+        </div>
+      </div>
     </div>
+
+    <script src="home.js"></script>
   </body>
 </html>
