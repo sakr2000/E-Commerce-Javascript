@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  />
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"
+    />
     <title>e-Shop | Products</title>
     <link rel="stylesheet" href="products.css" />
   </head>
@@ -17,12 +25,16 @@
       </a>
       <ul>
         <li><a href="../products/products.html">Products</a></li>
-        <li><a href="../login/login.html">Login</a></li>
-        <li><a href="../register/register.html">Register</a></li>
+        <li class="login"><a href="../login/login.html">Login</a></li>
+        <li class="register">
+          <a href="../register/register.html">Register</a>
+        </li>
+        <li class="logout">Logout</li>
         <div class="cart">
           <span class="material-icons"> shopping_cart </span>
           <span class="cart-items">0</span>
         </div>
+        <div id="userName"></div>
       </ul>
     </div>
 
@@ -39,23 +51,33 @@
         </ul>
       </div>
 
-      <div class="product-items">
+      <div class="product-items"></div>
     </div>
 
+    <!-- product popup -->
+    <div class="product-popup">
+      <div class="popup-container"></div>
+    </div>
+
+    <!-- Cart -->
     <div class="cart-popup">
       <div class="cart-container">
         <div class="cart-header">
           <h3>Cart</h3>
           <span class="material-icons close"> close </span>
         </div>
-        <div class="cart-items">
-      </div>
-      <div class="cart-footer">
-        <h3>Total : <span class="cart-total">0</span></h3>
-        <button class="btn btn-clear">Clear Cart</button>
-        <button class="btn btn-checkout">Checkout</button>
+        <div class="cart-items"></div>
+        <div class="cart-footer">
+          <h3>Total : <span class="cart-total">0</span></h3>
+          <button class="btn btn-clear">Clear Cart</button>
+          <button class="btn btn-checkout">Checkout</button>
+        </div>
       </div>
     </div>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+    <script src="../../assets/js/cart.js"></script>
+    <script src="../../assets/js/navbar.js"></script>
     <script src="products.js"></script>
   </body>
 </html>
