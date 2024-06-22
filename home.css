@@ -1,10 +1,11 @@
 @import "global.css";
+@import "assets/css/cart.css";
 
 .main-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background-color: #f2f2f2;
   position: relative;
 }
@@ -157,3 +158,306 @@
   }
 }
 /* slider styles end */
+
+/* Logos Section */
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.logos img {
+  width: 15%;
+  height: 100px;
+  padding: 1rem;
+  filter: grayscale(100%);
+  transition: 0.2s ease-in;
+}
+
+.logos img:hover {
+  filter: grayscale(0);
+}
+
+/* About Section */
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: rgb(252, 253, 245);
+}
+
+.about-section .about-text {
+  width: 60%;
+  margin-right: 1rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.about-section .about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-section .about-text h2::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px;
+  margin: 1rem auto;
+  background-color: var(--Limonera-5);
+  border-radius: 5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.about-section .about-text h2:hover::after {
+  width: 25%;
+}
+
+.about-section .about-text p {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.about-section .about-image {
+  width: 40%;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.about-section .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Services Section */
+.services-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: #f2f2f2;
+}
+
+.services-section .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 20%;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.services-section .service:hover {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.services-section .service .material-icons {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--Limonera-5);
+}
+
+.services-section .service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.services-section .service p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Testimonial Section */
+
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.testimonials-section .container {
+  width: 90%;
+  margin-right: 1rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.testimonials-section .container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.testimonials-section .container h2::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px;
+  margin: 1rem auto;
+  background-color: var(--Limonera-5);
+  border-radius: 5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.testimonials-section .container h2:hover::after {
+  width: 25%;
+}
+
+.testimonials-section .testimonials-slider {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testimonials-section .testimonials-slider .testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.testimonials-section .testimonials-slider .testimonial:hover {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.testimonials-section .testimonials-slider .testimonial img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testimonials-section .testimonials-slider .testimonial p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.testimonials-section .testimonials-slider .testimonial h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--Limonera-5);
+}
+
+/* newsletter section */
+
+.newsletter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f2f2f2;
+}
+
+.newsletter-section .container {
+  width: 90%;
+  margin-right: 1rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.newsletter-section .container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.newsletter-section .container h2::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px;
+  margin: 1rem auto;
+  background-color: var(--Limonera-5);
+  border-radius: 5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.newsletter-section .container h2:hover::after {
+  width: 25%;
+}
+
+.newsletter-section .input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-section .input-box input {
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+.newsletter-section .input-box input::placeholder {
+  font-size: 1rem;
+}
+
+.newsletter-section .input-box input:focus {
+  border-bottom: 3px solid var(--Limonera-5);
+}
+
+.newsletter-section .input-box button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--Limonera-5);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: 0.2s ease-in-out;
+}
+
+.newsletter-section .input-box button:hover {
+  background-color: var(--Limonera-transparent-5);
+}
+
+.newsletter-section .input-box button:active {
+  transform: scale(0.95);
+}
