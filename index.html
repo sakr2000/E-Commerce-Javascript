@@ -11,19 +11,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <title>Home Page</title>
+    <title>e-shop | Home</title>
     <link rel="stylesheet" href="home.css" />
   </head>
   <body>
     <!-- Nav Bar -->
     <div class="nav-bar">
-      <a href="index.html" class="logo">
-        <img src="assets/images/Logo.png" alt="e-shop" />
-      </a>
-      <ul>
-        <li><a href="pages/products/products.html">Products</a></li>
+      <div>
+        <a href="index.html" class="logo">
+          <img src="assets/images/Logo.png" alt="e-shop" />
+        </a>
+        <ul>
+          <li><a href="pages/products/products.html">Products</a></li>
+        </ul>
+      </div>
+      <ul class="login">
         <li><a href="pages/login/login.html">Login</a></li>
         <li><a href="pages/register/register.html">Register</a></li>
+      </ul>
+      <ul class="logout">
+        <li id="userName"></li>
+        <li><a href="#" id="logout">Logout</a></li>
         <div class="cart">
           <span class="material-icons"> shopping_cart </span>
           <span class="cart-items">0</span>

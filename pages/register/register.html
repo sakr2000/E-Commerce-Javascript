@@ -6,41 +6,64 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e-Shop | Register</title>
     <link rel="stylesheet" href="register.css" />
   </head>
   <body>
     <div class="nav-bar">
-      <a href="../../index.html" class="logo">
-        <img src="../../assets/images/Logo.png" alt="My Fancy shop" />
-      </a>
+      <div>
+        <a href="../../index.html" class="logo">
+          <img src="../../assets/images/Logo.png" alt="e-shop" />
+        </a>
+        <ul>
+          <li><a href="../products/products.html">Products</a></li>
+        </ul>
+      </div>
       <ul>
-        <li><a href="../products/products.html">Products</a></li>
         <li><a href="../login/login.html">Login</a></li>
-        <li><a href="../register/register.html">Register</a></li>
-        <div class="cart">
-          <span class="material-icons"> shopping_cart </span>
-        </div>
+        <li><a href="#">Register</a></li>
       </ul>
     </div>
     <div class="container">
       <div class="form-container">
         <form id="registerForm">
           <h1>Register</h1>
-          <input type="text" name="name" id="username" placeholder="Username" />
-          <input type="email" name="email" id="email" placeholder="Email" />
+          <input
+            type="text"
+            name="name"
+            id="username"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
           <input
             type="password"
             name="password"
             id="password"
             placeholder="Password"
+            required
           />
           <input
             type="password"
             name="confirmPassword"
             id="confirmPassword"
             placeholder="Confirm Password"
+            required
           />
           <input type="submit" value="Register" />
           <p>
@@ -52,6 +75,7 @@
         <img src="../../assets/images/register.svg" alt="" />
       </div>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
     <script src="register.js"></script>
   </body>
 </html>

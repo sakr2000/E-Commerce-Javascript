@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"
+    />
+    <title>e-Shop | Checkout</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+      <div>
+        <a href="../../index.html" class="logo">
+          <img src="../../assets/images/Logo.png" alt="e-shop" />
+        </a>
+        <ul>
+          <li><a href="../products/products.html">Products</a></li>
+        </ul>
+      </div>
+      <ul class="login">
+        <li><a href="../login/login.html">Login</a></li>
+        <li><a href="../register/register.html">Register</a></li>
+      </ul>
+      <ul class="logout">
+        <li id="userName"></li>
+        <li><a id="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <h1>Checkout</h1>
+
+    <div class="container">
+      <div class="cart-popup">
+        <div class="cart-container">
+          <div class="cart-header">
+            <h3>Cart</h3>
+          </div>
+          <div class="cart-items"></div>
+          <div class="cart-footer">
+            <h3>Total : <span class="cart-total">0</span></h3>
+            <button class="btn btn-clear">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-container">
+        <form class="form" id="checkoutForm">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Phone"
+            required
+          />
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="Address"
+            required
+          />
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="City"
+            required
+          />
+          <input
+            type="text"
+            name="country"
+            id="country"
+            placeholder="Country"
+            required
+          />
+
+          <button type="submit">Order</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+    <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/cart.js"></script>
+    <script src="checkout.js"></script>
+  </body>
+</html>

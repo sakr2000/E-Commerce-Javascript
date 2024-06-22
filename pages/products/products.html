@@ -24,21 +24,25 @@
   </head>
   <body>
     <div class="nav-bar">
-      <a href="../../index.html" class="logo">
-        <img src="../../assets/images/Logo.png" alt="My Fancy shop" />
-      </a>
-      <ul>
-        <li><a href="../products/products.html">Products</a></li>
-        <li class="login"><a href="../login/login.html">Login</a></li>
-        <li class="register">
-          <a href="../register/register.html">Register</a>
-        </li>
-        <li class="logout">Logout</li>
+      <div>
+        <a href="../../index.html" class="logo">
+          <img src="../../assets/images/Logo.png" alt="e-shop" />
+        </a>
+        <ul>
+          <li><a href="../products/products.html">Products</a></li>
+        </ul>
+      </div>
+      <ul class="login">
+        <li><a href="../login/login.html">Login</a></li>
+        <li><a href="../register/register.html">Register</a></li>
+      </ul>
+      <ul class="logout">
+        <li id="userName"></li>
+        <li><a id="logout">Logout</a></li>
         <div class="cart">
           <span class="material-icons"> shopping_cart </span>
           <span class="cart-items">0</span>
         </div>
-        <div id="userName"></div>
       </ul>
     </div>
 
@@ -48,6 +52,15 @@
     </div>
 
     <div class="product-container">
+      <div class="search-box" id="search-box">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search Products"
+        />
+        <span class="material-icons"> search </span>
+      </div>
       <div class="categories-container">
         <span>Categories :</span>
         <ul class="categories" id="categories">

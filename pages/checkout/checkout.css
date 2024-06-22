@@ -1,0 +1,102 @@
+@import "../../global.css";
+@import "../../assets/css/cart.css";
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 5px;
+  background-color: var(--Limonera-5);
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 75vh;
+}
+
+.container .cart-popup {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: relative;
+  top: 0;
+  display: flex;
+}
+
+.container .cart-popup .cart-header {
+  justify-content: center;
+}
+
+.container .cart-popup .cart-header h3 {
+  font-size: 2rem;
+}
+
+.container .cart-popup::before {
+  display: none;
+}
+.container .cart-popup .cart-container {
+  width: 100%;
+}
+
+.container .cart-container::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.container .form-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .form-container .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container .form-container .form .input {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.container .form-container .form input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.container .form-container .form input:focus {
+  border: 1px solid var(--Limonera-5);
+}
+
+.container .form-container .form button {
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  background-color: var(--Limonera-5);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}

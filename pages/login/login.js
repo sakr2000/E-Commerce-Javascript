@@ -2,8 +2,10 @@ var email = document.getElementById("email");
 var password = document.getElementById("password");
 var loginform = document.getElementById("loginForm");
 
+var date = new Date();
 var users = JSON.parse(window.localStorage.getItem("users")) || [];
 
+alertify.set("notifier", "position", "top-center");
 async function hashPassword(password) {
   const encoder = new TextEncoder();
   const data = encoder.encode(password);
@@ -21,12 +23,18 @@ async function checkPassword(inputPassword, storedHash) {
   const inputHash = await hashPassword(inputPassword);
 
   if (inputHash === storedHash) {
-    console.log("Password is correct");
     return true;
   } else {
-    console.log("Password is incorrect");
     return false;
   }
+}
+
+function setUserCookie(user) {
+  // expires in 3 days
+  date.setTime(date.getTime() + 3 * 24 * 60 * 60 * 1000);
+  document.cookie = `activeUser=${JSON.stringify(
+    user
+  )};expires=${date.toUTCString()};path=/`;
 }
 
 loginform.addEventListener("submit", function (e) {
@@ -36,14 +44,10 @@ loginform.addEventListener("submit", function (e) {
     if (user.email === email.value) {
       checkPassword(password.value, user.password).then((isCorrect) => {
         if (isCorrect) {
-          // Show success message
-          var activeUser = user;
-          window.localStorage.setItem("activeUser", JSON.stringify(activeUser));
-          alert("Login Successful");
+          setUserCookie(user);
+          window.location.href = "../../index.html";
         } else {
-          // Show error message
-
-          alert("Login Failed");
+          alertify.error("Incorrect Email or Password");
         }
       });
     }

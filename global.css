@@ -60,6 +60,12 @@ body {
   z-index: 100;
 }
 
+.nav-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .nav-bar .logo img {
   width: 120px;
 }
@@ -80,12 +86,24 @@ body {
   transition: all 0.3s ease;
   font-size: 1.5rem;
 }
-.nav-bar li.logout {
-  display: none;
+
+.nav-bar #logout:hover {
+  color: var(--red);
+  cursor: pointer;
 }
 
-.nav-bar li.logout:hover {
-  color: var(--red);
+.nav-bar #userName {
+  color: var(--Limonera-5);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffffb8;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.nav-bar #userName:hover {
+  color: var(--Limonera-1);
   cursor: pointer;
 }
 
