@@ -101,7 +101,8 @@ registerForm.addEventListener("submit", function (e) {
       };
       users.push(user);
       window.localStorage.setItem("users", JSON.stringify(users));
-      alert("Register Successful");
+      alertify.success("Registration successful", 2);
+      window.location.href = "../login/login.html";
     });
   }
 });
